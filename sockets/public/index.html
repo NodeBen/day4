@@ -1,0 +1,14 @@
+<script src="//localhost:3000/socket.io/socket.io.js"></script>
+<script>
+    
+    var socket = io('http://localhost:3000');
+
+    socket.on('news',function(data) {
+        console.log(data);
+        alert("Received News Event");
+        socket.emit('toto', {my : data});
+    });
+
+</script> 
+
+Hello !
